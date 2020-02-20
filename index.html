@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="script.js"></script>
+
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>CSS Basics</title>
+    </head>
+    <body>
+
+        <h1 class = "header">Basics of CSS</h1>
+        <div class = "basics">
+            <h2 class = "basic-css">Basic Syntax</h2>
+
+            <p>To link an external stylesheet to your HTML, use the following syntax</p>
+            <pre><code onclick="clickFunction()">&lt;link rel="stylesheet" type="text/css" href="yourstylesheet.css"&gt;</code></pre>
+
+            <p>When referencing a class, use periods. i.e "."</p>
+            <pre><code>.selector{<br>&emsp;&emsp;property1:value;<br>&emsp;&emsp;property2:value;<br>}</code></pre>
+
+            <p>When referencing an ID, use hashtags. i.e "#"</p>
+            <pre><code>#selector{<br>&emsp;&emsp;property1:value;<br>&emsp;&emsp;property2:value;<br>}</code></pre>
+            
+        </div>
+
+        <div>
+            <h2 class = "list-block">List CSS </h2><pre><code id = "list-style">list-style-type:disc;</code></pre>
+            <!-- <button class = "copy-button" onclick="copy_text()">Copy</button> -->
+            
+            <ul id = "list">
+                <li>Coffee</li>
+                <li>Creamer</li>
+                <li>Sugar</li>
+                <li>Eggs</li>
+                <li>Sausages</li>
+                <li>Butter</li>
+            </ul>
+            <div>
+                <button onclick="listToCircle()">Circle</button>
+                <button onclick="listToSquare()">Square</button>
+                <button onclick="listToDisc()">Disc</button>
+            </div>
+        </div>
+        
+
+        <h2 class = "test">Border CSS Test</h2><pre><code id = "border-code">border: 5px solid black;</code></pre>
+        <div class = "border-test" id = "border-test">
+            <p>&emsp;Adjust the slider and watch the border change.</p>
+        </div>
+
+        <div class = "thickness-control">
+            <p>Thickness:</p>
+            <input type="range"  id = "slider" min="1" max="10" value="5" class = "slider" oninput="updateBorder()">
+            <p id = "slider-val">5px</p>
+            <div>
+                <button onclick="borderToSolid()">Solid</button>
+                <button onclick="borderToDotted()">Dotted</button>
+                <button onclick="borderToDashed()">Dashed</button>
+                <button onclick="borderToDouble()">Double</button>
+            </div>
+            
+        </div>
+
+        <div class = "mp-section">
+            <h2 class = "margin-padding">Margin/Padding CSS Test</h2>
+            <pre><code id = "mp-code">margin: 5px; padding: 5px;</code></pre>
+
+            <div class = "box-model">
+                <p id = "mp-test">Try out different margins and paddings with the sliders below.</p>
+            </div>
+            
+
+            <div class = "margin-style">
+                <p>Margin:<span id = "margin-val"> 5px</span></p>
+                <input type="range"  id = "m-slider" min="0" max="50" value="5" class = "m-slider" oninput="changeMargin()">
+            </div>
+            
+            
+            <div class = "padding-style">
+                <p>Padding:<span id = "padding-val"> 5px</span></p>
+                <input type="range"  id = "p-slider" min="0" max="50" value="5" class = "p-slider" oninput="changePadding()">
+                
+            </div>
+            <div class = "mp-buttons">
+                <button onclick="unitToPx()">px</button>
+                <button onclick="unitToPercent()">%</button>
+                <button onclick="unitToEm()">em</button>
+            </div>
+        </div>
+
+        <div class = "text-section">
+            <h2 class = "text-align-heading">Text Alignment</h2>
+            <pre><code id = "text-align-code">text-align:left;</code></pre>
+
+            <div id = "text-align-para">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a odio dolor. Aenean condimentum quam hendrerit ipsum porta, a varius tortor ultrices. <br><br>Nunc hendrerit fringilla est nec maximus. Cras maximus ligula nec varius rutrum. Curabitur aliquet, nibh et sodales auctor, tortor sapien ultricies massa, sed tempor enim massa pellentesque dui. Aliquam ut aliquet nibh. Aliquam lacinia nulla non est lobortis, sodales dignissim leo bibendum. Donec in fringilla mauris. Quisque mattis et ligula quis aliquet.</p>
+
+                <p>Nullam ultrices euismod vulputate. Ut sed felis condimentum, suscipit mauris nec, pharetra neque. Mauris varius ante id nulla euismod elementum. Sed nec massa quam. Maecenas mollis lacus diam, nec ultricies nibh viverra in. Quisque metus est, eleifend et libero a, gravida faucibus lorem. Morbi et mi sed ipsum efficitur vulputate. Praesent faucibus ornare metus, sed pharetra massa. Praesent rutrum tortor nec purus rhoncus sodales. Quisque ultricies pretium bibendum. Donec nisi leo, eleifend id interdum eu, euismod at leo.
+                </p>
+            </div>
+            
+
+            <button onclick="textAlignLeft()">Left</button>
+            <button onclick="textAlignCenter()">Center</button>
+            <button onclick="textAlignRight()">Right</button>
+            
+        </div>
+
+        <div class = "text-color-section">
+            <h2>Text Color and Background Color</h2>
+            <p id = "color-tester">Using the controls below, you can adjust the color of the text and the background color.</p>
+            
+            <p>To adjust the colors, try playing with the color picker or enter your own value in the text field.</p>
+
+            <div class = "color-controls">
+                <p>Text Color:
+                    <input type="color" id="favcolor" class = "colorbtn" name="favcolor" value="#ff0000" onchange="adjustText()"> 
+                    <input type="text" id="color-box" name="color-box" onKeyUp="return adjustColor()"><br>
+                </p>
+                
+                <p>Background Color:
+                    <input type="color" id="favcolorBG" class = "colorbtn" name="favcolor" value="#ff0000" onchange="adjustBGText()">
+                    <input type="text" id="BG-color-box" name="BG-color-box" onKeyUp="return adjustBGColor()">
+                </p>
+            </div>
+        </div>
+
+        <!-- <div class = "mp-section-2">
+            <p class = "mp-customized">Margin/Padding Test 2</p>
+            <div class = "box-model">
+                <p id = "mp-test-custom">Try out more specific margins and paddings.</p>
+            </div>
+            
+
+            <input type="range"  id = "mt-slider" min="0" max="50" value="5" class = "mt-slider" oninput="changeMarginTop()">
+            <input type="range"  id = "mr-slider" min="0" max="50" value="5" class = "mr-slider" oninput="changeMarginRight()">
+            <input type="range"  id = "mb-slider" min="0" max="50" value="5" class = "mb-slider" oninput="changeMarginBottom()">
+            <input type="range"  id = "ml-slider" min="0" max="50" value="5" class = "ml-slider" oninput="changeMarginLeft()">
+            <br>
+            <input type="range"  id = "pt-slider" min="0" max="50" value="5" class = "pt-slider" oninput="changePaddingTop()">
+            <input type="range"  id = "pr-slider" min="0" max="50" value="5" class = "pr-slider" oninput="changePaddingRight()">
+            <input type="range"  id = "pb-slider" min="0" max="50" value="5" class = "pb-slider" oninput="changePaddingBottom()">
+            <input type="range"  id = "pl-slider" min="0" max="50" value="5" class = "pl-slider" oninput="changePaddingLeft()">
+            
+        </div> -->
+        
+        
+    </body>
+
+</html>
