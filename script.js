@@ -177,23 +177,35 @@ function updateAlignText(){
 var currentColor;
 
 function getColorValue(){
-    return document.getElementById("color-box").value;
+    if(document.getElementById("color-box").value == ""){
+        return "#000000";
+    }else{
+        return document.getElementById("color-box").value;
+    }
+    
 }
 function adjustColor(){
     var color = getColorValue();
     document.getElementById("color-tester").style.color = color;
 
+    adjustColorCode();
     syncColorPicker(color);
 }
 
 function getBGColorValue(){
-    return document.getElementById("BG-color-box").value;
+    if(document.getElementById("BG-color-box").value == ""){
+        return "#ffffff";
+    }else{
+        return document.getElementById("BG-color-box").value;
+    }
+    
 }
 
 function adjustBGColor(){
     var color = getBGColorValue();
     document.getElementById("color-tester").style.backgroundColor = color;
 
+    adjustColorCode();
     syncBGColorPicker(color);
 }
 
@@ -221,6 +233,35 @@ function syncColorPicker(color){
 
 function syncBGColorPicker(color){
     document.getElementById("favcolorBG").value = color;
+}
+
+function adjustColorCode(){
+    document.getElementById("tc-code").innerHTML = "color:" + getColorValue() + ";" + " background-color:" + getBGColorValue() + ";";
+}
+
+function changeHyperCode(state){
+    document.getElementById("hyper-code").innerHTML = "text-decoration:" + state + ";";
+}
+
+function checkCheckBox(){
+    if(document.getElementById("hyperlink-none").checked == false){
+        var a = document.getElementById("links").childNodes;
+        a[1].style.textDecoration = "none";
+        a[3].style.textDecoration = "none";
+        a[5].style.textDecoration = "none";
+        a[7].style.textDecoration = "none";
+
+        changeHyperCode("none");
+    } else{
+        var a = document.getElementById("links").childNodes;
+        a[1].style.textDecoration = "underline";
+        a[3].style.textDecoration = "underline";
+        a[5].style.textDecoration = "underline";
+        a[7].style.textDecoration = "underline";
+
+        changeHyperCode("underline");
+    }
+    
 }
 
 

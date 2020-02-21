@@ -32,8 +32,9 @@ code{
 
 .nav a{
     color:white;
-    margin-left: 8%;
+    margin-left: 6%;
     text-decoration: none;
+    font-size: calc(0.4em + 1vmin);
     /* position: static; */
 }
 
@@ -125,7 +126,7 @@ button{
 .thickness-control > p{
     /* margin-top: 1%; */
     display: inline-block;
-    font-size: 1.4em;
+    font-size: 1.5em;
     /* position: relative; */
     
 }
@@ -182,7 +183,7 @@ button{
 #text-align-para{
     width: 100%;
     margin-top: 45px;
-    font-size: 1.1em;
+    font-size: 1.5em;
 }
 
 .text-align-heading{
@@ -193,9 +194,18 @@ button{
     margin-bottom: 200px;
 }
 
+#tc-code{
+    margin-bottom: 10%;
+}
+
+.color-instructions{
+    font-size: 1.5em;
+}
+
 #color-tester{
-    font-size: 1.4em;
+    font-size: 1.5em;
     padding: 1em;
+    margin-top: 35px;
     border: 1px solid black;
 }
 
@@ -239,6 +249,21 @@ button{
     background: #555; 
   }
 
+.links{
+    margin-top: 40px;
+    
+}
+
+.links a{
+    /* display: inline; */
+    margin-right: 5%;
+    font-size: 1.5em;
+    display:block;
+    width:fit-content;
+    text-decoration: none;
+    /* text-decoration: none; */
+}
+
 .footer{
     left: 0;
     bottom: 0;
@@ -256,6 +281,26 @@ button{
     
 }
 
+#footer-link{
+    color:white;
+}
+
+#footer-link:hover{
+    color:black;
+}
+
+.hyperlink-decor{
+    width: 20px;
+    height:20px;
+    margin-top: 20px;
+    margin-right: 50px;
+}
+
+.checkbox-text{
+    font-size: 1.4em;
+    display: inline;
+}
+
 @media only screen and (max-width: 600px) {
     body {
         max-width: 80%;
@@ -269,6 +314,16 @@ button{
 
     .color-controls{
         max-width: 100%;
+    }
+
+    .nav a {
+        display: block;
+        font-size: 1em;
+        /* position: relative; */
+    }
+
+    .nav{
+        position: relative;
     }
   }
 

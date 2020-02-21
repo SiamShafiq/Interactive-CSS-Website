@@ -12,7 +12,7 @@
     </head>
     <body>
 
-        <h1 class = "header">Basics of CSS</h1>
+        <h1 class = "header">An interactive intro to CSS</h1>
         <nav class = "nav">
             <a href = "#basic-spacer">Basic Syntax</a>
             <a href = "#list-spacer">Lists</a>
@@ -20,6 +20,7 @@
             <a href = "#mp-spacer">Margin/Padding</a>
             <a href = "#ta-spacer">Text Align</a>
             <a href = "#tc-spacer">Text Color</a>
+            <a href = "#hyperlink-spacer">Hyperlinks</a>
         </nav>
 
         <div id = "basic-spacer"></div>
@@ -66,7 +67,9 @@
         
         <div id = "border-spacer"></div>
 
-        <h2 class = "test">Border CSS Test</h2><pre><code id = "border-code">border: 5px solid black;</code></pre>
+        <h2 class = "test">Border CSS Test</h2>
+        <pre><code id = "border-code">border: 5px solid black;</code></pre>
+
         <div class = "border-test" id = "border-test">
             <p>&emsp;Adjust the slider and watch the border change.</p>
         </div>
@@ -138,25 +141,54 @@
         <div id = "tc-spacer"></div>
         <div class = "text-color-section">
             <h2>Text Color and Background Color</h2>
+            <pre><code id = "tc-code">color:#000000; background-color:#ffffff;</code></pre>
             <p id = "color-tester">Using the controls below, you can adjust the color of the text and the background color.</p>
             
-            <p>To adjust the colors, try playing with the color picker or enter your own value in the text field.</p>
+            <p class = "color-instructions">To adjust the colors, try playing with the color picker or enter your own value in the text field.</p>
 
             <div class = "color-controls">
-                <p>Text Color:
+                <p class = "color-box-label">Text Color:
                     <input type="color" id="favcolor" class = "colorbtn" name="favcolor" value="#ff0000" onchange="adjustText()"> 
                     <input type="text" id="color-box" name="color-box" onKeyUp="return adjustColor()"><br>
                 </p>
                 
-                <p>Background Color:
+                <p class = "color-box-label">Background Color:
                     <input type="color" id="favcolorBG" class = "colorbtn" name="favcolor" value="#ff0000" onchange="adjustBGText()">
                     <input type="text" id="BG-color-box" name="BG-color-box" onKeyUp="return adjustBGColor()">
                 </p>
             </div>
         </div>
 
+        <div id = "hyperlink-spacer"></div>
+        <div>
+            <h2>Hyperlinks</h2>
+            <pre><code id = "hyper-code">text-decoration:none;</code></pre>
+            <div class = "links" id = "links">
+                <a class = "hyper" href = "https://www.google.com">Google</a>
+                <a class = "hyper" href = "https://www.github.com">Github</a>
+                <a class = "hyper" href = "https://www.yahoo.com">Yahoo</a>
+                <a class = "hyper" href = "https://www.facebook.com">Facebook</a>
+            </div>
+
+            <p class = "checkbox-text">Text Decoration:</p>
+
+            <p class = "checkbox-text">Underline:</p>
+            <input type="checkbox" id="hyperlink-none" class = "hyperlink-decor" name="hyperlink" onchange="checkCheckBox()">
+
+            <!-- <p class = "checkbox-text">None:</p>
+            <input type="checkbox" id="hyperlink-underl" class = "hyperlink-decor" name="hyperlink" onchange="checkCheckBox()">
+
+            <p class = "checkbox-text">Line Through:</p>
+            <input type="checkbox" id="hyperlink-line" class = "hyperlink-decor" name="hyperlink" onchange="checkCheckBox()">
+
+            <p class = "checkbox-text">Underline Overline:</p>
+            <input type="checkbox" id="hyperlink-ulol" class = "hyperlink-decor"name="hyperlink" onchange="checkCheckBox()"> -->
+            
+            
+        </div>
+
         <div class = "footer">
-            <p>Digital Skills</p>
+            <p>Made with ❤️ by <a id ="footer-link" href="https://github.com/SiamShafiq">Siam Shafiq</a></p>
         </div>
 
         <!-- <div class = "mp-section-2">
