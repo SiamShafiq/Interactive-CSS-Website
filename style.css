@@ -1,9 +1,14 @@
+html {
+    scroll-behavior: smooth;
+  }
+
 body{
     max-width: 60%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 0;
     font-family: 'Montserrat', sans-serif;
-    padding-bottom: 20%;
+    /* padding-bottom: 20%; */
 }
 
 code{
@@ -17,10 +22,29 @@ code{
     
 }
 
-code:hover{
+.nav{
+    position: -webkit-sticky;
+    position: sticky;
+    background-color: #008080;
+    padding:1.2em;
+    top:0;
+}
+
+.nav a{
+    color:white;
+    margin-left: 8%;
+    text-decoration: none;
+    /* position: static; */
+}
+
+.nav a:hover{
+    border-bottom: 3px solid white;
+}
+
+/* code:hover{
     font-size: 2.0em;
     border:2px solid blue;
-}
+} */
 
 /* pre{
     transition:font-size 0.4s;
@@ -31,8 +55,13 @@ pre:hover{
     border:2px solid blue;
 } */
 
+#list{
+    margin-top: 50px;
+    font-size: 1.5em;
+}
+
 ul{
-    font-size: 1.7em;
+    /* font-size: 1.5em; */
 }
 
 h2{
@@ -190,6 +219,43 @@ button{
     margin-left: 2%;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+.footer{
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height:50%;
+    margin:0;
+    margin-top: 15%;
+    padding-top:0.1%;
+    padding-bottom: 0.1em;
+    /* height: 5%; */
+    background-color:#008080;
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    
+}
+
 @media only screen and (max-width: 600px) {
     body {
         max-width: 80%;
@@ -205,6 +271,8 @@ button{
         max-width: 100%;
     }
   }
+
+
 
 
 

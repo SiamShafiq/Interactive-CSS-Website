@@ -21,7 +21,7 @@ function listToDisc(){
 }
 
 function listDisplayStyle(newStyle){
-    document.getElementById("list-style").innerHTML = "list-style-type:" + newStyle;
+    document.getElementById("list-style").innerHTML = "list-style-type:" + newStyle + ";";
 }
 
 

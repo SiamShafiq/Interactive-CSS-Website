@@ -13,27 +13,45 @@
     <body>
 
         <h1 class = "header">Basics of CSS</h1>
+        <nav class = "nav">
+            <a href = "#basic-spacer">Basic Syntax</a>
+            <a href = "#list-spacer">Lists</a>
+            <a href = "#border-spacer">Borders</a>
+            <a href = "#mp-spacer">Margin/Padding</a>
+            <a href = "#ta-spacer">Text Align</a>
+            <a href = "#tc-spacer">Text Color</a>
+        </nav>
+
+        <div id = "basic-spacer"></div>
         <div class = "basics">
             <h2 class = "basic-css">Basic Syntax</h2>
 
             <p>To link an external stylesheet to your HTML, use the following syntax</p>
-            <pre><code onclick="clickFunction()">&lt;link rel="stylesheet" type="text/css" href="yourstylesheet.css"&gt;</code></pre>
+            <pre><code onclick="clickFunction()">&lt;head&gt;<br>&emsp;&emsp;&lt;link rel="stylesheet" type="text/css" href="yourstylesheet.css"&gt;<br>&lt;/head&gt;</code></pre>
 
             <p>When referencing a class, use periods. i.e "."</p>
             <pre><code>.selector{<br>&emsp;&emsp;property1:value;<br>&emsp;&emsp;property2:value;<br>}</code></pre>
 
             <p>When referencing an ID, use hashtags. i.e "#"</p>
             <pre><code>#selector{<br>&emsp;&emsp;property1:value;<br>&emsp;&emsp;property2:value;<br>}</code></pre>
-            
         </div>
 
+        <div id = "list-spacer"></div>
+
         <div>
-            <h2 class = "list-block">List CSS </h2><pre><code id = "list-style">list-style-type:disc;</code></pre>
+            <h2 class = "list-block" id = "list-block">List CSS </h2><pre><code id = "list-style">list-style-type:disc;</code></pre>
             <!-- <button class = "copy-button" onclick="copy_text()">Copy</button> -->
             
             <ul id = "list">
                 <li>Coffee</li>
+                <ul>
+                    <li>Tim Hortons</li>
+                    <li>Nescafe</li>
+                </ul>
                 <li>Creamer</li>
+                <ul>
+                    <li>Coffemate</li>
+                </ul>
                 <li>Sugar</li>
                 <li>Eggs</li>
                 <li>Sausages</li>
@@ -46,6 +64,7 @@
             </div>
         </div>
         
+        <div id = "border-spacer"></div>
 
         <h2 class = "test">Border CSS Test</h2><pre><code id = "border-code">border: 5px solid black;</code></pre>
         <div class = "border-test" id = "border-test">
@@ -65,6 +84,7 @@
             
         </div>
 
+        <div id = "mp-spacer"></div>
         <div class = "mp-section">
             <h2 class = "margin-padding">Margin/Padding CSS Test</h2>
             <pre><code id = "mp-code">margin: 5px; padding: 5px;</code></pre>
@@ -90,9 +110,14 @@
                 <button onclick="unitToPercent()">%</button>
                 <button onclick="unitToEm()">em</button>
             </div>
+            <div id = "ta-spacer"></div>
         </div>
 
+        
+        <!-- <br> -->
+        
         <div class = "text-section">
+            
             <h2 class = "text-align-heading">Text Alignment</h2>
             <pre><code id = "text-align-code">text-align:left;</code></pre>
 
@@ -110,6 +135,7 @@
             
         </div>
 
+        <div id = "tc-spacer"></div>
         <div class = "text-color-section">
             <h2>Text Color and Background Color</h2>
             <p id = "color-tester">Using the controls below, you can adjust the color of the text and the background color.</p>
@@ -127,6 +153,10 @@
                     <input type="text" id="BG-color-box" name="BG-color-box" onKeyUp="return adjustBGColor()">
                 </p>
             </div>
+        </div>
+
+        <div class = "footer">
+            <p>Digital Skills</p>
         </div>
 
         <!-- <div class = "mp-section-2">
