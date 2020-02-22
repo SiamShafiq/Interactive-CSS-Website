@@ -27,15 +27,26 @@ code{
     position: sticky;
     background-color: #008080;
     padding:1.2em;
+    /* width: 100%; */
+    /* padding-left:; */
+    padding-right: auto;
+    /* margin-left: 1%; */
     top:0;
 }
 
 .nav a{
+    margin-left: 30px;
+    /* padding-top: 10%; */
     color:white;
-    margin-left: 6%;
+    /* margin-right: 45px; */
     text-decoration: none;
-    font-size: calc(0.4em + 1vmin);
+    /* font-size: calc(0.4em + 1vmin); */
+    font-size:15px;
     /* position: static; */
+}
+
+.nav a:hover {
+    border: 2px solid white;
 }
 
 .nav a:hover{
@@ -262,6 +273,10 @@ button{
     width:fit-content;
     text-decoration: none;
     /* text-decoration: none; */
+}
+
+.hyper-title{
+    margin-top: 60px;
 }
 
 .footer{
